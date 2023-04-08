@@ -1,7 +1,10 @@
 package ua.lviv.iot.algo.part1.lab1;
 
-import lombok.*;
-
+import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -17,6 +20,5 @@ public abstract class Camera {
 
     public abstract String takePhoto();
 
-    public void add(Camera camera) {
-    }
+
 }
