@@ -20,5 +20,14 @@ public abstract class Camera {
 
     public abstract String takePhoto();
 
+public String getHeaders(){
+    return "brand,model,lens";
+}
+
+public String toCSV(){
+    return brand + "," + model + "," + lens;
 
 }
+
+}
+

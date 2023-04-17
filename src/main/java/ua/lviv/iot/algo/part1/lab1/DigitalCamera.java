@@ -3,6 +3,7 @@ package ua.lviv.iot.algo.part1.lab1;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.junit.Test;
 
 @ToString
 @Setter
@@ -16,9 +17,8 @@ public class DigitalCamera extends Camera {
     private int photosCount;
 
 
-
     DigitalCamera(final String brand, final String model, final String lens,
-     final String resolution, final double zoom,
+                  final String resolution, final double zoom,
                   final String memoryCardType, final int photosCount) {
         super(brand, model, lens);
         this.resolution = resolution;
@@ -29,7 +29,6 @@ public class DigitalCamera extends Camera {
 
     }
 
-
     public void savePhoto() {
         setPhotosCount(photosCount + 1);
     }
@@ -37,6 +36,7 @@ public class DigitalCamera extends Camera {
     public void eraseMemory() {
         setPhotosCount(0);
     }
+
 
     public void changeSettings(final String resolution, final double zoom) {
         setResolution(resolution);
@@ -49,4 +49,12 @@ public class DigitalCamera extends Camera {
         return resolution + " " + zoom;
     }
 
+
+    public String getHeaders(){
+        return super.getHeaders() + "," + "resolution,zoom,memoryCardType,photosCount";
+    }
+
+public String toCSV(){
+        return super.toCSV() + "," + resolution + "," + zoom + "," + memoryCardType + "," + photosCount;
+}
 }

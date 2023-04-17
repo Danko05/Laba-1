@@ -28,4 +28,14 @@ public class VideoCamera extends Camera {
     public String takePhoto() {
         return videoFormat + matrixSize;
     }
+
+    public String getHeaders(){
+        return super.getHeaders() + "," + "videoFormat,matrixSize";
+    }
+
+    public String toCSV(){
+    return super.toCSV() + "," + videoFormat + "," + matrixSize;
+    }
+
+
 }

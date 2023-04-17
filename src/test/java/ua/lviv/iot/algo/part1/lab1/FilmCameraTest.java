@@ -17,7 +17,20 @@ class FilmCameraTest {
     void ToString() {
 
         FilmCamera filmCamera1 = new FilmCamera("ZOMEI", "RW", "QW2", "Slides", 653);
-        filmCamera1.toString();
         assertEquals("FilmCamera(filmType=Slides, filmISO=653)", filmCamera1.toString());
     }
+
+    @Test
+    void TestGetHeaders(){
+        FilmCamera filmcamera1 = new FilmCamera("Lumix", "FX-34", "EF_S","Slides ", 400);
+        assertEquals("brand model lens,filmType filmISO",filmcamera1.getHeaders());
+    }
+
+@Test
+    void TestToCSV(){
+    FilmCamera filmcamera2 = new FilmCamera("Cannot", "FE-67", "TR-S","Slides ", 1600);
+    assertEquals("Cannot, FE-67, TR-S,Slides , 1600",filmcamera2.toCSV());
+}
+
+
 }

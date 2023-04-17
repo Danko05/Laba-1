@@ -43,7 +43,19 @@ class DigitalCameraTest {
     void testToString() {
 
         DigitalCamera digitalCamera1 = new DigitalCamera("Canon", "EOS 6D ", "EF 50mm ", "26.2MP", 1.0, "SD", 12);
-        digitalCamera1.toString();
         assertEquals("DigitalCamera(resolution=26.2MP, zoom=1.0, memoryCardType=SD, photosCount=12)", digitalCamera1.toString());
+    }
+    @Test
+    void TestGetHeaders() {
+        DigitalCamera digitalCamera1 = new DigitalCamera("Canon", "EOS 6D ", "EF 50mm ", "26.2MP", 1.0, "SD", 12);
+        assertEquals("brand model lens,resolution zoom memoryCardType photosCount", digitalCamera1.getHeaders());
+    }
+
+
+    @Test
+    void TestToCSV(){
+        DigitalCamera digitalCamera2 = new DigitalCamera   ("Cannot", "QW-34", "NM12", "7584x5372", 35.43, "SD", 10364);
+        digitalCamera2.toCSV();
+        assertEquals("Cannot,QW-34,NM12,7584x5372,35.43,SD,10364",digitalCamera2.toCSV());
     }
 }

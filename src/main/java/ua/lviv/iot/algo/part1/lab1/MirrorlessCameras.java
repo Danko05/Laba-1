@@ -28,4 +28,13 @@ public class MirrorlessCameras extends Camera {
     public String takePhoto() {
         return weight + videoFormats;
     }
+
+
+    public String getHeaders(){
+        return super.getHeaders() + "," + "weight,videoFormats";
+    }
+
+     public String  toCSV(){
+        return super.toCSV() + "," + weight + "," + videoFormats;
+     }
 }

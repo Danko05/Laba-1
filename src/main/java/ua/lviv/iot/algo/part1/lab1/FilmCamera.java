@@ -32,4 +32,11 @@ public class FilmCamera extends Camera {
     }
 
 
+    public String getHeaders(){
+        return super.getHeaders() + "," + "filmType,filmISO";
+    }
+
+    public String toCSV(){
+        return super.toCSV() + "," + filmType + "," + filmISO;
+    }
 }
