@@ -1,0 +1,12 @@
+brand,model,lens,resolution,zoom,memoryCardType,photosCount
+Cannot,QW-90,JH12,1234x3234,5436.43,SD,1234
+Cannot,QW-34,NM12,7584x5372,35.43,SD,10364
+brand,model,lens,filmType,filmISO
+Lumix,FX-34,EF_S,Slides ,400
+Cannot,FE-67,TR-S,Slides ,1600
+brand,model,lens,videoFormat,matrixSize
+Cannot,RX_3,HOKO,HD-CVI  ,2
+Lumix,RX_5,HOKO,AHD  ,5
+brand,model,lens,weight,videoFormats
+Cannot,D5600, AF-P,1500,MPEG-4
+Nicon,D478, AF-G,1200,  MPEG-1
