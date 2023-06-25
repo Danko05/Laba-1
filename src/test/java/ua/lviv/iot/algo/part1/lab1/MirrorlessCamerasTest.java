@@ -27,7 +27,7 @@ class MirrorlessCamerasTest {
     void TestGetHeaders(){
         MirrorlessCameras mirrorlessCameras1 = new MirrorlessCameras("Cannot",
                 "D5600", " AF-P", 1500, "MPEG-4");
-        assertEquals("brand model lens,weight videoFormats", mirrorlessCameras1.getHeaders());
+        assertEquals("brand,model,lens,weight,videoFormats", mirrorlessCameras1.getHeaders());
     }
 
     @Test

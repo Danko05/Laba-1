@@ -48,7 +48,7 @@ class DigitalCameraTest {
     @Test
     void TestGetHeaders() {
         DigitalCamera digitalCamera1 = new DigitalCamera("Canon", "EOS 6D ", "EF 50mm ", "26.2MP", 1.0, "SD", 12);
-        assertEquals("brand model lens,resolution zoom memoryCardType photosCount", digitalCamera1.getHeaders());
+        assertEquals("brand,model,lens,resolution,zoom,memoryCardType,photosCount", digitalCamera1.getHeaders());
     }
 
 

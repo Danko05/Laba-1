@@ -23,7 +23,7 @@ class VideoCameraTest {
     @Test
     void TestGetHeaders(){
         VideoCamera videoCamera1 = new VideoCamera("HOCO", "PING-20", "HTC", "HD", 12);
-        assertEquals("brand model lens,videoFormat matrixSize", videoCamera1.getHeaders());
+        assertEquals("brand,model,lens,videoFormat,matrixSize", videoCamera1.getHeaders());
     }
 
     @Test
